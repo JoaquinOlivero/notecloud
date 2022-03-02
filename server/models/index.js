@@ -4,7 +4,7 @@ const { Sequelize, DataTypes } = require("sequelize");
 
 // Connect to db
 const sequelize = new Sequelize(
-    "postgres://postgres:ABCD1234@129.151.113.181:5432/notecloud", {
+    process.env.POSTGRESQL_URL, {
         logging: false
     }
 );
