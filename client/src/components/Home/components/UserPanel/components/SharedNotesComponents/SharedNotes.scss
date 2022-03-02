@@ -1,0 +1,126 @@
+@import '../../../../../scss/utils.scss';
+
+.SharedNotes{
+    position: relative;
+    z-index: 1;
+    .SharedNotes-header{
+        margin: 10px 0;
+        opacity: 0.9;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+    }
+    .display-none{
+        display: none;
+    }
+    .display-block{
+        display: block;
+    }
+    .SharedNotes-content{
+        .display-none{
+            display: none;
+        }
+        .display-block{
+            display: block;
+        }
+
+        .SharedNotes-container-notebook{
+            margin: 6px 0px;
+            // padding: 6px 0;
+            width: 100%;
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+            transition: all 200ms ease-in-out;
+            &:hover{
+                border-bottom: 1px solid rgba($color: #fff, $alpha: 0.5);
+            }
+            .SharedNotes-notebook-header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &:hover{
+                    cursor: pointer;
+                    background-color: $darkBackgroundLighter;
+                }
+                .SharedNotes-notebook-title{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 6px 0;
+                    >div{
+                        display: flex;
+                        align-items: center;
+                        margin-left: 10px;
+                        opacity: 1;
+                        font-size: 14px;
+                        font-weight: 600;
+                        letter-spacing: 0.8px;
+                        text-transform: uppercase;
+                        span{
+                            margin-left: 5px;
+                        }
+                        .library-icon{
+                            opacity: 0.5;
+                            transition: opacity 200ms ease-in-out;
+                        }
+                    }
+                    
+
+                    .SharedNotes-notebook-btns-span{
+                        transition: opacity 200ms ease-in-out;
+                        opacity: 0;
+                        font-size: 12px;
+                        font-weight: 600;
+                        letter-spacing: 0.8px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .SharedNotes-notebook-btns{
+                    display: flex;
+                    align-items: center;
+                    margin-right: 5px;
+                    
+                }
+            }
+            
+
+            .SharedNotes-notebook-content{
+                opacity: 0;
+                background-color: #2A2E3A;
+                padding: 4px 0;
+                transition: opacity 200ms ease-in-out;
+                .SharedNotes-notebook-no-content{
+                    text-decoration: none;
+                    margin-left: 20px;
+                    padding-bottom: 5px;
+                    >div{
+                        margin: 5px 20px;
+                        opacity: 0.5;
+                        font-style: italic;
+                        font-size: 12px;
+                        font-weight: 600;
+                        letter-spacing: 0.8px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    .SharedNotes-manage-modal{
+        position: absolute;
+        top: 0;
+        background-color: #2A2E3A;
+        width: 100%;
+        height: 400px;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+    }
+
+}

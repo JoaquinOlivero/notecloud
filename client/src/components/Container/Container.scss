@@ -1,0 +1,14 @@
+@import '../scss/utils.scss';
+.Container{
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    .Spinner{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+}

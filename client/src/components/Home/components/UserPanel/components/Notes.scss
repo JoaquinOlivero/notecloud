@@ -1,0 +1,123 @@
+@import '../../../../scss/utils.scss';
+
+
+.Notes{
+    ul {
+        list-style-type: none;
+    }
+
+    .NotesTree{
+        .active-node{
+            background-color: rgb(42, 46, 58);
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .active-note{
+            background-color: $darkBackground;
+            // font-weight: 600;
+            &:hover{
+                background-color: $darkBackgroundLighter;
+            }
+
+        }
+
+        .NotesTree-TreeNode{
+           position: relative;
+            .NotesTree-TreeNode-container{
+                display: flex;
+                align-items: center;
+                
+                .TreeNode-note{
+                    padding: 2px 0;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: $darkBackgroundLighter;
+                    }
+                    .TreeNode-note-content{
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    // z-index: 50;
+                        .TreeNode-note-icon{
+                            display: flex;
+                            align-items: center;
+                            margin-right: 6px;
+                            .article-icon{
+                                opacity: 0.4;
+                                font-size: 20px;
+                                transition: opacity 200ms ease-in;
+                            }
+                        }
+                    }
+                   
+                    .TreeNode-note-btn-container{
+                        display: flex;
+                        align-items: center;
+                        margin-right: 10px;
+                        position: relative;
+                        span{
+                            width: 180%;
+                            position: absolute;
+                            right: 100%;
+                            transition: opacity 200ms ease-out;
+                            opacity: 0;
+                            font-size: 12px;
+                            font-weight: 600;
+                            letter-spacing: 0.8px;
+                            text-transform: uppercase;
+                            z-index: 2;
+                        }
+                    }
+                }
+                
+                
+            }
+            
+            .NotesTree-TreeNode-Child-container{
+                text-decoration: none;
+                margin-left: 10px;
+                padding: 4px 0;
+            }
+            .TreeNode-container-arrow{
+                transition: background-color 150ms ease-out;
+                &:hover{
+                    cursor: pointer;
+                    background-color: $darkBackground;
+                }
+
+                .arrow-drop-down{
+                    transform: rotate(270deg);
+                    transition: transform 200ms ease-out;
+    
+                    
+                    
+                }
+                
+            }
+
+            .NotesTree-TreeNode-No-Child-container{
+                text-decoration: none;
+                margin-left: 20px;
+                padding-bottom: 5px;
+                >div{
+                    margin: 5px 20px;
+                    opacity: 0.5;
+                    font-style: italic;
+                    font-size: 12px;
+                    font-weight: 600;
+                    letter-spacing: 0.8px;
+                    text-transform: uppercase;
+                }
+            }
+
+          
+        }
+       
+        
+    }
+}

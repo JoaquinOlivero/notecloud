@@ -1,0 +1,46 @@
+.ActiveUsers{
+    display: flex;
+    .ActiveUsers-user{
+        position: relative;
+        img{
+            margin: 0 8px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            transition: transform 200ms ease-in-out;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+
+        span{
+            position: absolute;
+            top: 100%;
+            left: 50%; 
+            transform: translateX(-50%);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            transition: opacity 200ms ease-out;
+            opacity: 0;
+        }
+
+        .user-green-dot{
+            position: absolute;
+            left: 64%;
+            bottom: 10%;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgb(27, 190, 27);
+        }
+    }
+    .display-none{
+        display: none;
+    }
+    .display-block{
+        display: block;
+    }
+}

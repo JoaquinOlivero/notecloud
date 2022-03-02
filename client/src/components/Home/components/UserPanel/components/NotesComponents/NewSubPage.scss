@@ -1,0 +1,16 @@
+@import '../../../../../scss/utils.scss';
+
+.NewSubPage{
+
+    button{
+        letter-spacing: 0.5px;
+        font-size: 12px;
+        font-weight: 600;
+        opacity: 0.1;
+        transition: opacity 200ms ease-out;
+        &:hover{
+            opacity: 1;
+        }
+    }
+  
+}

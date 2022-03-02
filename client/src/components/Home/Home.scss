@@ -1,0 +1,228 @@
+@import '../scss/utils.scss';
+
+.Home{
+    display: flex;
+    // width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    .display-block{
+        display: block;
+    }
+    .display-none{
+        display: none;
+    }
+    //UserPanel
+    .UserPanel{
+        position: fixed;
+        width: 18%;
+        min-height: 100%;
+        background-color: $darkBackgroundLighter;
+        transition: all 500ms ease-out;
+        .UserPanel-user{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+        }
+       .UserPanel-notes{
+            opacity: 1;
+            width: 100%;
+            margin-top: 50px;
+            transition: all 200ms ease-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .UserPanel-notes-header{
+                opacity: 0.9;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 0.8px;
+                text-transform: uppercase;
+            }
+            .UserPanel-notes-search{
+                margin-bottom: 10px;
+            }
+            .UserPanel-notes-content{
+                    
+                    .UserPanel-content-spinner{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        margin: 10px 0;
+                        #spinner{
+                            font-size: 14px;
+                        }
+                    }
+                    .UserPanel-search-span-found{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        opacity: 0.5;
+                        font-size: 12px;
+                        font-weight: 600;
+                        letter-spacing: 0.8px;
+                        text-transform: uppercase;
+                    }
+
+                    .UserPanel-search-container{
+                        width: 100%;
+                        &:hover{
+                            cursor: pointer;
+                            background-color: $darkBackgroundLighter;
+                        }
+                        >div{
+                            letter-spacing: 1px;
+                            padding: 4px 0;
+                            margin-left: 10px;
+                            font-weight: 600;
+                        }
+                    }
+            }
+       }
+        .UserPanel-chevron{
+            font-size: 24px;
+            position: fixed;
+            top: 1%;
+            left: 16.5%;
+            transition: transform 200ms ease-in-out;
+            &:hover{
+                transform: rotate(180deg);
+                cursor: pointer;
+            }
+        }
+
+        .UserPanel-SharedNotes{
+            transition: all 200ms ease-out;
+            width: 100%;
+            margin-top: 25px;
+        }
+    }
+
+
+    //NotesContent
+    .NotesContent{
+        margin-left: 18%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+        transition: all 500ms ease-out;
+        position: relative;
+        //Editor
+        .NotesContent-editor{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            min-height: 80%;
+            height: auto;
+            margin-top: 120px;
+            position: relative;
+            >div{
+                width: 70%;
+                height: auto;
+                border-top: 2px solid $darkBackgroundLighter;
+                border-left: 2px solid $darkBackgroundLighter;
+                border-right: 2px solid $darkBackgroundLighter;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+        }
+    }
+
+
+    //Chevron to open user panel
+    .Home-chevron{
+        position: fixed;
+        opacity: 0;
+        top: 5%;
+        left: 0.4%;
+        transition: transform 150ms ease-in-out, opacity 500ms ease-out;
+        z-index: 6;
+        &:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    }
+    
+}
+
+.ce-toolbar__actions--opened{
+    display: none;
+}
+
+
+@media (max-width: 1300px) {
+    .Home{
+        .UserPanel{
+            width: 25%;
+            .UserPanel-chevron{
+                left: 22%;
+            }
+        }
+        .NotesContent{
+            margin-left: 25%;
+            .NotesContent-editor{
+                >div{
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .Home{
+        display: flex;
+        flex-direction: column;
+        .UserPanel{
+            position: relative;
+            width: 100%;
+            // opacity: 0;
+            transition: all 250ms ease-in-out;
+            // display: none;
+            .UserPanel-chevron{
+                display: none;
+            }
+            .UserPanel-notes{
+                margin-top: 0px;
+            }
+            .UserPanel-SharedNotes{
+                padding-top: 10px;
+                border-top: 2px solid rgba(255, 255, 255, 0.705);
+                .SharedNotes-header{
+                    margin: 0px;
+                }
+                .NewSharedSpace{
+                    margin: 0px;
+                }
+            }
+            .ManageSharedSpaceModal{
+                position: absolute;
+                top: -70%;
+                background-color: #2F3342;
+                z-index: 500;
+            }
+            .SharedNotes-manage-modal{
+                background-color: rgba(0, 0, 0, 0);
+            }
+        }
+        .NotesContent{
+            z-index: 1;
+            margin-left: 0px;
+            .NotesContent-editor{
+                margin-top: 25px;
+                >div{
+                    width: 95%;
+                }
+            }
+        }
+    }
+
+    
+}

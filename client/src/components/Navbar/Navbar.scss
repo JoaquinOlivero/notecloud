@@ -1,0 +1,72 @@
+@import '../scss/utils.scss';
+
+.Navbar{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 82%;
+    // width: 100%;
+    height: 40px;
+    border-bottom: 2px solid $darkBackgroundLighter;
+    background-color: $darkBackground;
+    z-index: 2;
+
+    .Navbar-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        .Navbar-controls{
+            margin-left: 8%;
+        }
+    
+        .Navbar-notification{
+            margin-right: 8%;
+            position: relative;
+            .Navbar-menu{
+                display: none;
+            }
+        }
+    }
+
+    .Navbar-active-users-container{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        height: 100%;
+        left: 50%; 
+        transform: translateX(-50%);
+        width: auto;
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .Navbar{
+       width: 75%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .Navbar{
+       width: 100%;
+       position: relative;
+       .Navbar-container{
+        .Navbar-controls{
+            margin-left: 4px;
+        }
+        .Navbar-notification{
+            display: flex;
+            align-items: center;
+            margin-right: 4px;
+            .Navbar-menu{
+                margin-left: 4px;
+                display: block;
+                opacity: 0.5;
+            }
+        }
+    }
+    }
+
+}

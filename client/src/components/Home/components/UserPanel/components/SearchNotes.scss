@@ -1,0 +1,47 @@
+@import '../../../../scss/utils.scss';
+
+.SearchNotes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    input{
+        color: rgba(255, 255, 255, 0.8);
+        border: none;
+        border-radius: 10px;
+        padding: 8px;
+        width: 80%;
+        background-color: $darkBackground;
+        letter-spacing: 0.8px;
+        transition: transform 150ms ease-in;
+        
+        &:focus{
+            outline: none;
+            transform: scale(1.04);
+        }
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.04);
+        }
+
+        &:hover::-webkit-input-placeholder{
+            opacity: 1;
+        }
+        &:focus::-webkit-input-placeholder{
+            opacity: 0;
+        }
+        
+    }
+    ::-webkit-input-placeholder {
+        color: white;
+        opacity: 0.4;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        transition: opacity 150ms ease-in;
+    }
+}

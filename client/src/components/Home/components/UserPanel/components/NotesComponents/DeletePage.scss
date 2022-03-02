@@ -1,0 +1,10 @@
+@import '../../../../../scss/utils.scss';
+
+.DeletePage{
+    opacity: 0.1;
+    transition: opacity 200ms ease-out;
+    &:hover{
+        cursor: pointer;
+        opacity: 1;
+    }
+}

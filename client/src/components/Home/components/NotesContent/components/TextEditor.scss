@@ -1,0 +1,114 @@
+@import '../../../../scss/utils.scss';
+.ce-block__content {
+    h1{
+        margin: 0;
+    }
+    a{
+        font-weight: 600;
+        color: #427ca8;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        transition: color 200ms ease;
+        &:hover{
+            color: white;
+        }
+    }
+    ::-moz-selection { /* Code for Firefox */
+        background-color: #315e81;
+    }
+    
+    ::selection {
+        background-color: #315e81;
+    }
+    
+    max-width: 94%;
+    .cdx-block{
+        padding: 10px 8px;
+        margin-bottom: 5px;
+        &:hover{
+            background-color:  $darkBackgroundLighter;
+        }
+        &:focus{
+            border-bottom: 1px solid $darkBackgroundLighter;
+            border-top: 1px solid $darkBackgroundLighter;
+        }
+        span{
+            color: white;
+        }
+    }
+    
+}
+.ce-toolbar__content {
+    background-color: white;
+    max-width: 110%;
+}
+.ce-toolbar__plus {
+    left: -4%;
+}
+.ce-block--selected .ce-block__content {
+    background: #315e81;
+}
+.ce-inline-toolbar{
+    background-color: $darkBackground;
+    .ce-inline-toolbar__dropdown{
+        &:hover{
+            background-color: $darkBackgroundLighter;
+        }
+    }
+    button{
+        color: rgb(236, 236, 236);
+        &:hover{
+            background-color: $darkBackgroundLighter;
+        }
+    }
+    .ce-conversion-toolbar--showed{
+        background-color: $darkBackground;
+        .ce-conversion-toolbar__tools{
+           >div{
+                &:hover{
+                    background-color: $darkBackgroundLighter;
+                }
+           }
+        }
+
+        .ce-conversion-tool__icon{
+            background-color: $darkBackgroundLighter;
+        }
+        
+    }
+}
+.codex-editor{
+    
+    #page-title{
+        padding: 5px 0;
+        width: 100%;
+        text-align: center;
+        outline: none;
+    }
+}
+
+.cdx-simple-image__caption{
+    display: none;
+}
+
+.cdx-simple-image{
+    display: flex;
+    justify-content: center;
+    .cdx-simple-image__picture{
+    }
+}
+
+.simplebar-scrollbar {
+    background-color: #3f4352 !important;
+    border-radius: 10px;
+    &:before{
+        visibility: hidden;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .simplebar-vertical{
+        display: none;
+    }
+}
