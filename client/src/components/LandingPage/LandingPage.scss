@@ -330,6 +330,7 @@
                                 align-items: flex-end;
                                 .Login-form-button {
                                     padding: 8px 20px;
+                                    margin-bottom: 2px;
                                 }
                                 .Login-form-button-tailspin{
                                     align-self: center;
@@ -349,8 +350,50 @@
         .LandingPage-left-side{
             .LandingPage-left-side-content{
                 .LandingPage-content-first{
+                    border-bottom-right-radius: 120px;
                     h1{
                         font-size: 60px;
+                    }
+                }
+            }
+        }
+
+        .LandingPage-right-side {
+            .LandingPage-right-side-content{
+                .right-side-content-tabs{
+                    .tabs-login{
+                        font-size: 14px;
+                    }
+                    .tabs-register{
+                        font-size: 14px;
+                    }
+                }
+                
+                .Login{
+                    .Login-content{
+                        width: 100%;
+                        .Login-form{
+                            margin-top: 4px;
+                            .Login-form-field{
+                                label{
+                                    font-size: 14px;
+                                }
+                                input{
+                                    height: 25px;
+                                }
+                            }
+
+                            .Login-form-button-container{
+                                
+                                .Login-form-button {
+                                    padding: 4px 10px;
+                                    margin-bottom: 4px;
+                                }
+                                .Login-form-button-tailspin{
+                                    // align-self: center;
+                                }
+                            }
+                        }
                     }
                 }
             }

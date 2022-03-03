@@ -93,7 +93,6 @@ function Features() {
 
     return (
         <div className='Features'>
-            {/* <div className={`Features-devices ${isVisibleWebImage ? 'active' : ''}`} > */}
             <div className='Features-devices' >
 
                 <h2 style={{ opacity: `${isVisibleWebImage && '1'}` }}>Ready to be used in big and small screens</h2>
