@@ -4,8 +4,6 @@
     width: 100%;
     background-color: $darkBackground;
 
-
-
     .Features-devices{
         position: relative;
         transition: opacity 1s ease-in-out;
@@ -17,9 +15,11 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         h2{
+            position: relative;
             font-size: 32px;
             opacity: 0;
             transition: opacity 500ms ease-in-out;
+            z-index: 3;
         }
         .Features-devices-images{
             margin-top: 50px;
@@ -85,14 +85,11 @@
                     content: "";
                     position: absolute;
                     background-color: $darkBackground;
-                    // background-color: rebeccapurple;
-                    // bottom: -50px;
                     bottom: 0;
-                    // right: -25%;
                     right: 0;
                     height: 100%;
                     width: 100%;
-                    z-index: 8800;
+                    z-index: 2;
                     border-radius: 50%;
                     transform: translate(50%, 50%);
                 }
@@ -110,14 +107,11 @@
                     content: "";
                     position: absolute;
                     background-color: $darkBackground;
-                    // background-color: rebeccapurple;
-                    // bottom: -50px;
                     bottom: 0;
-                    // right: -25%;
                     right: 0;
                     height: 100%;
                     width: 100%;
-                    z-index: 8800;
+                    z-index: 2;
                     border-radius: 50%;
                     transform: translate(50%, -50%);
                 }
@@ -126,7 +120,6 @@
     }
 
     .Features-pdf{
-        // margin-top: 100px;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -134,7 +127,7 @@
         background-color: $lightBackground;
         border-top-right-radius: 180px;
         border-bottom-right-radius: 180px;
-        
+        padding-bottom: 60px;
         h2{
             opacity: 0;
             margin-top: 50px;
@@ -153,7 +146,9 @@
             width: 80%;
             margin-top: 35px;
             transition: opacity 600ms ease-in-out;
+            
             img{
+                width: 100%;
                 margin: 15px 0;
                 border-radius: 10px;
             }
@@ -167,6 +162,7 @@
         align-items: center;
         padding-bottom: 50px;
         h2{
+            position: relative;
             opacity: 0;
             margin: 50px 0;
             font-size: 32px;
@@ -177,6 +173,7 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             transition: opacity 500ms ease-in-out;
+            z-index: 3;
         }
         img{
             opacity: 0;
@@ -206,10 +203,7 @@
                     content: "";
                     position: absolute;
                     background-color: $darkBackground;
-                    // background-color: rebeccapurple;
-                    // bottom: -50px;
                     bottom: 0;
-                    // right: -25%;
                     right: 0;
                     height: 100%;
                     width: 100%;
@@ -231,10 +225,7 @@
                     content: "";
                     position: absolute;
                     background-color: $darkBackground;
-                    // background-color: rebeccapurple;
-                    // bottom: -50px;
                     bottom: 0;
-                    // right: -25%;
                     right: 0;
                     height: 100%;
                     width: 100%;
@@ -248,7 +239,7 @@
 
 
     .Features-shared{
-        // margin-top: 100px;
+        padding-bottom: 60px;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -264,7 +255,7 @@
             color: rgb(24, 8, 88);
             text-align: center;
             height: auto;
-            width: 100%;
+            width: 80%;
             font-weight: 600;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -278,10 +269,7 @@
             opacity: 0;
             transition: opacity 800ms ease-in-out, transform 500ms ease-in-out;
             img{
-                // opacity: 0;
                 width: 80%;
-                // transform: translateX(50%);
-                
                 margin: 15px 0;
                 border-radius: 10px;
             }
@@ -296,6 +284,7 @@
         align-items: center;
         padding-bottom: 50px;
         h2{
+            position: relative;
             opacity: 0;
             margin: 50px 0;
             font-size: 32px;
@@ -306,6 +295,7 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             transition: opacity 500ms ease-in-out;
+            z-index: 3;
         }
         img{
             opacity: 0;
