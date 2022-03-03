@@ -6,8 +6,6 @@
     display: flex;
     position: relative;
 
-
-
     .LandingPage-left-side {
         position: relative;
         height: auto;
@@ -31,7 +29,6 @@
                 justify-content: center;
                 color: rgb(24, 8, 88);
                 border-bottom-right-radius: 360px;
-                // border-bottom-left-radius: 180px;
                 h1 {
                     font-size: 100px;
                     margin: 0px;
@@ -261,6 +258,99 @@
                                 transform: scale(1.02);
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1366px) {
+    .LandingPage {
+        .LandingPage-right-side{
+            .LandingPage-right-side-content{
+                width: 70%;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 900px) {
+    .LandingPage {
+       .LandingPage-left-side {
+        width: 100%;
+        .LandingPage-left-side-content{
+            .LandingPage-content-first{
+                border-bottom-right-radius: 200px;
+            }
+        }
+       }
+       .LandingPage-right-side {
+            position: absolute;
+            height: auto;
+            width: 100%;
+            background-image: none;
+            background-color: $lightBackground;
+            .LandingPage-right-side-content{
+                border-radius: 0px;
+                padding: 10px 0;
+                width: 100%;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                .right-side-content-tabs{
+                    margin: 0;
+                }
+                .Login {
+                    margin: 0;
+                    .Login-content {
+                        .Login-error {
+                        }
+                        .Login-form {
+                            height: 100%;
+                            flex-direction: row;
+                            .Login-form-field {
+                                margin: 0 10px;
+                                width: 30%;
+                                label {
+                                    width: 100%;
+                                    text-align: center;
+                                }
+                                input {
+                                    margin-bottom: 0;
+                                    height: 35px;
+                                   
+                                    &:focus {
+                                    }
+                                }
+                            }
+                            .Login-form-button-container{
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-end;
+                                .Login-form-button {
+                                    padding: 8px 20px;
+                                }
+                                .Login-form-button-tailspin{
+                                    align-self: center;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+       }
+    }
+}
+
+@media (max-width: 555px) {
+    .LandingPage {
+        .LandingPage-left-side{
+            .LandingPage-left-side-content{
+                .LandingPage-content-first{
+                    h1{
+                        font-size: 60px;
                     }
                 }
             }

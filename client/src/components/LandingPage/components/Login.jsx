@@ -68,7 +68,7 @@ function Login() {
                     <input type="password" name="" id="" placeholder='Enter your password' onChange={e => setPassword(e.target.value)} required />
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', widht: '100%' }}>
+                <div className='Login-form-button-container'>
                     <div className='Login-form-button' onClick={handleLogin}>
                         <button intent='primary' disabled={isSubmitting} type="submit" className={isSubmitting ? 'Login-form-button-isSubmitting' : ''}>Log In</button>
                     </div>

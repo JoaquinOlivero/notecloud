@@ -88,7 +88,7 @@ function Register() {
 
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', widht: '100%' }}>
                     <div className='Register-form-button' onClick={handleRegister}>
-                        <button intent='primary' disabled={isSubmitting} type="submit" className={isSubmitting ? 'Login-form-button-isSubmitting' : ''}>Log In</button>
+                        <button intent='primary' disabled={isSubmitting} type="submit" className={isSubmitting ? 'Login-form-button-isSubmitting' : ''}>Register</button>
                     </div>
                     <div className='Login-form-button-tailspin' style={{ marginLeft: '10px' }}>
                         {isSubmitting && <TailSpin color="#180858" height={25} width={25} />}
