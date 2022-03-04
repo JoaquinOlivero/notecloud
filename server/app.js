@@ -13,10 +13,7 @@ const http = require("http");
 const socketIo = require("socket.io");
 
 // Socket.io files
-// const sharedNotesSockets = require('./sockets/shared_notes_sockets')
-// const userNotificationSockets = require('./sockets/user_notification_sockets')
 const UserSocket = require('./sockets/userSocket')
-
 
 // CORS
 const corsOptions = {
@@ -53,11 +50,7 @@ const io = socketIo(server,{
     }
 });
 
-// sharedNotesSockets(io)
-// userNotificationSockets(io)
 UserSocket(io)
-
-
 
 server.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
