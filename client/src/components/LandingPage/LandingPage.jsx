@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './LandingPage.scss'
 import Features from './components/Features'
 import Login from './components/Login'
@@ -6,6 +6,7 @@ import Register from './components/Register'
 
 function LandingPage() {
     const [loginTab, setLoginTab] = useState(true)
+    const checkFeaturesRef = useRef();
 
     const changeTab = e => {
         if (loginTab && e.target.innerText === 'Register') {
@@ -15,6 +16,32 @@ function LandingPage() {
         }
 
     }
+
+    useEffect(() => {
+        const checkOpacity = async () => {
+            checkFeaturesRef.current.style.opacity = 1
+            setTimeout(() => {
+                checkFeaturesRef.current.style.opacity = 0
+            }, 2000);
+        }
+        checkOpacity()
+        const refreshIntervalId = setInterval(checkOpacity, 4000)
+
+        const checkFeaturesObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.intersectionRatio !== 1) {
+                    checkFeaturesRef.current.style.display = 'none'
+                    clearInterval(refreshIntervalId);
+                }
+            });
+        }, { root: null, threshold: [1] });
+
+        checkFeaturesObserver.observe(checkFeaturesRef.current)
+        return () => {
+            checkFeaturesObserver.unobserve(checkFeaturesRef.current)
+        }
+    }, [])
+
     return (
         <div className='LandingPage'>
 
@@ -23,6 +50,7 @@ function LandingPage() {
                     <div className='LandingPage-content-first'>
                         <h1>NoteCloud</h1>
                         <p>The place to massively share notes!</p>
+                        <span id='check-features' ref={checkFeaturesRef}>Scroll down to get a quick glimpse of the website &#10084;&#65039;</span>
                     </div>
                     <Features />
 

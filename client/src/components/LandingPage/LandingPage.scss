@@ -19,6 +19,7 @@
             justify-content: space-between;
 
             .LandingPage-content-first{
+                position: relative;
                 background-color: $lightBackground;
                 width: 100%;
                 height: 100vh;
@@ -29,21 +30,28 @@
                 justify-content: center;
                 color: rgb(24, 8, 88);
                 border-bottom-right-radius: 360px;
+
+                #check-features{
+                    opacity: 0;
+                    position: absolute;
+                    bottom: 0;
+                    margin-bottom: 50px;
+                    letter-spacing: 0.5px;
+                    transition: opacity 2s ease-in-out;
+                }
+
                 h1 {
                     font-size: 100px;
                     margin: 0px;
                     letter-spacing: 2px;
                 }
-    
                 p {
                     letter-spacing: 1.2px;
                     margin: 0px;
                     font-weight: bold;
                 }
             }
-            
         }
-
     }
 
     .LandingPage-right-side {
@@ -67,7 +75,6 @@
             width: 60%;
             height: auto;
             border-radius: 25px;
-            // color: $darkBackground;
             color: rgb(24, 8, 88);
             padding: 20px 0;
 
@@ -205,11 +212,9 @@
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
-
                         .Register-form-field {
                             margin: 15px 0;
                             width: 100%;
-
                             label {
                                 display: inline-block;
                                 margin: 5px 0;
@@ -217,7 +222,6 @@
                                 letter-spacing: 1px;
                                 color: #34375a;
                             }
-
                             input {
                                 border: none;
                                 border-radius: 50px;
@@ -227,12 +231,10 @@
                                 background-color: #f8f8fc;
                                 padding: 0 20px;
                                 font-size: 16px;
-
                                 &:focus {
                                     outline: none;
                                 }
                             }
-
                             .form-field-error {
                                 text-align: center;
                                 color: red;
@@ -249,10 +251,8 @@
                             -webkit-box-shadow: 0px 2px 5px 2px rgba(24, 8, 88, 0.4);
                             -moz-box-shadow: 0px 2px 5px 2px rgba(24, 8, 88, 0.4);
                             box-shadow: 0px 2px 5px 2px rgba(24, 8, 88, 0.4);
-
                             cursor: pointer;
                             transition: transform 60ms ease-in;
-
                             &:hover {
                                 background-color: rgb(24, 8, 88, 0.8);
                                 transform: scale(1.02);
@@ -270,6 +270,15 @@
         .LandingPage-right-side{
             .LandingPage-right-side-content{
                 width: 70%;
+            }
+        }
+        .LandingPage-left-side{
+            .LandingPage-left-side-content{
+                .LandingPage-content-first{
+                    #check-features{
+                        margin-bottom: 100px;
+                    }
+                }
             }
         }
     }
@@ -353,6 +362,10 @@
                     border-bottom-right-radius: 120px;
                     h1{
                         font-size: 60px;
+                    }
+                    #check-features{
+                        text-align: center;
+                        width: 90%;
                     }
                 }
             }
