@@ -169,6 +169,7 @@
                         }
 
                         .Login-form-button {
+                            position: relative;
                             background-color: rgb(24, 8, 88);
                             color: white;
                             padding: 10px 20px;
@@ -184,7 +185,17 @@
                                 background-color: rgb(24, 8, 88, 0.8);
                                 transform: scale(1.02);
                             }
+                            .Login-form-button-tailspin{
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                position: absolute;
+                                top: 0;
+                                right: -8px;
+                                transform: translateX(100%);
+                            }
                         }
+                        
                     }
                 }
             }

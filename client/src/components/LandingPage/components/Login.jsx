@@ -71,10 +71,11 @@ function Login() {
                 <div className='Login-form-button-container'>
                     <div className='Login-form-button' onClick={handleLogin}>
                         <button intent='primary' disabled={isSubmitting} type="submit" className={isSubmitting ? 'Login-form-button-isSubmitting' : ''}>Log In</button>
+                        <div className='Login-form-button-tailspin' style={{ marginLeft: '10px' }}>
+                            {isSubmitting && <TailSpin color="#180858" height={25} width={25} />}
+                        </div>
                     </div>
-                    <div className='Login-form-button-tailspin' style={{ marginLeft: '10px' }}>
-                        {isSubmitting && <TailSpin color="#180858" height={25} width={25} />}
-                    </div>
+
                 </div>
             </form>
 
