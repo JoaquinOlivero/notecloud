@@ -6,12 +6,10 @@ import './Container.scss'
 import axios from 'axios'
 
 
-
 // Contexts
 import { UserContext } from '../../contexts/UserContext'
 import { SocketContext } from '../../contexts/UserSocketContext'
 
-// router.post('/logout', verifyToken, userController.logout)
 
 function Container() {
     const socket = useContext(SocketContext);
@@ -31,7 +29,6 @@ function Container() {
             })
 
             const res2 = await axios.post('/notes/data', { headers: { 'Content-Type': 'application/json' }, withCredentials: true })
-            //res2.data[0] -> the user's notes // res.data[1] -> the user's shared notebooks/notes
             setUserNotes(res2.data[0])
             setUserSharedNotes(res2.data[1])
 

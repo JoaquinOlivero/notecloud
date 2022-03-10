@@ -5,12 +5,18 @@ if (process.env.NODE_ENV !== "production") {
 // Packages
 const express = require("express");
 const app = express();
-const port = 5000;
+const PORT = process.env.PORT
 const bodyParser = require("body-parser");
 const cookieparser = require("cookie-parser");
 const cors = require("cors");
-const http = require("http");
 const socketIo = require("socket.io");
+const fs = require('fs');
+
+// Cloudflare certificates
+const serverOptions = {
+    key: fs.readFileSync('./cert/api.notecloud.xyz.key'),
+    cert: fs.readFileSync('./cert/api.notecloud.xyz.pem')
+}
 
 // Socket.io files
 const UserSocket = require('./sockets/userSocket')
@@ -42,7 +48,7 @@ app.use("/user", userRoutes);
 app.use("/notes", notesRoutes)
 app.use("/shared_notes", sharedNotesRoutes)
 
-const server = http.createServer(app);
+const server = https.createServer(serverOptions, app);
 
 const io = socketIo(server,{
     cors:{
@@ -52,6 +58,4 @@ const io = socketIo(server,{
 
 UserSocket(io)
 
-server.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
-});
+server.listen(PORT)

@@ -24,7 +24,9 @@ module.exports.signUp = async (req, res) => {
             res.cookie('refreshToken', refreshToken, {
                 maxAge: 1000 * 60 * 60 * 24, // 24 hours
                 httpOnly: true,
-                sameSite: 'Lax',
+                // sameSite: 'Lax',
+                sameSite: 'None',
+                secure: true,
                 signed: true,
                 secret: process.env.COOKIE_SECRET
             })
@@ -76,7 +78,9 @@ module.exports.signIn = async (req, res) => {
         res.cookie('refreshToken', refreshToken, {
             maxAge: 1000 * 60 * 60 * 24, // 24 hours
             httpOnly: true,
-            sameSite: 'Lax',
+            // sameSite: 'Lax',
+            sameSite: 'None',
+            secure: true,
             signed: true,
             secret: process.env.COOKIE_SECRET
         })
@@ -107,7 +111,9 @@ module.exports.refreshToken = async (req, res) => {
         res.cookie('refreshToken', refreshToken, {
             maxAge: 1000 * 60 * 60 * 24, // 24 hours
             httpOnly: true,
-            sameSite: 'none',
+            // sameSite: 'Lax',
+            sameSite: 'None',
+            secure: true,
             signed: true,
             secret: process.env.COOKIE_SECRET
         })
