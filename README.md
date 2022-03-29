@@ -17,4 +17,6 @@ The notes are called pages and they are implemented as a tree data structure. A 
 
 A new main page (main node) can be added by clicking on the white 'plus' button. This will immediately add it to the list.
 
-A page can be expanded to show the children pages and can be collapsed to hide them. The 'plus' button next to the page will create a new child. The 'trash' button will delete the page and all of its children.
+A page can be expanded to show children pages and can be collapsed to hide them. The 'plus' button next to the page will create a new child. The 'trash' button will delete the page and all of its children.
+
+The **QUICK SEARCH** bar finds all the notes that contain whatever was searched, whether it is on the title or it is anywhere in the body of the note.
