@@ -42,3 +42,9 @@ It is possible to share notes with other users in real-time. Users can create gr
 ![export-pdf](https://res.cloudinary.com/chipi/image/upload/c_scale,h_528/v1646169158/export_to_pdf_e0ej3u.png)
 
 ![exported-pdf](https://res.cloudinary.com/chipi/image/upload/c_scale,h_528/v1646169163/PDF_l7zefh.png)
+
+### Real-time notification
+
+Users added to groups are notified. 
+
+![notification](https://i.imgur.com/OMb1I8w.gif)
